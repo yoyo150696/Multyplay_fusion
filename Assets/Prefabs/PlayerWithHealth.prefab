@@ -410,7 +410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
-  Ball: {fileID: 2522851650734100396, guid: ea9572785510d493cbcac196c3420cfb, type: 3}
+  Ball: {fileID: -754194650080161937, guid: ea9572785510d493cbcac196c3420cfb, type: 3}
   BallSpawnPoint: {fileID: 7981182145662766938}
 --- !u!1 &1659655185611649620
 GameObject:
@@ -546,6 +546,7 @@ GameObject:
   - component: {fileID: 2833755149963863264}
   - component: {fileID: 6018871181468367950}
   - component: {fileID: 8266277111833496135}
+  - component: {fileID: 9188401159206982499}
   m_Layer: 0
   m_Name: PlayerWithHealth
   m_TagString: Player
@@ -623,6 +624,7 @@ MonoBehaviour:
   - {fileID: 7441417250251376685}
   - {fileID: 2833755149963863264}
   - {fileID: 8266277111833496135}
+  - {fileID: 9188401159206982499}
   - {fileID: 5142634994728142368}
   SimulationBehaviours: []
 --- !u!114 &3131791806609735432
@@ -863,6 +865,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
   healthbar: {fileID: 1642197878}
+--- !u!114 &9188401159206982499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3131791806609733877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46be9445eea4d4a41bc1cbe88155d389, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolationDataSource: 0
 --- !u!1 &4171625553056485005
 GameObject:
   m_ObjectHideFlags: 0

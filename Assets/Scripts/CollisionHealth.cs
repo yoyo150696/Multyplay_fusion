@@ -8,19 +8,19 @@ public class CollisionHealth : NetworkBehaviour
     
     bool first = true;
         void OnTriggerEnter(Collider other){
+            if (!HasStateAuthority)  return;
             
             if(first){
                 Debug.Log(other.name);
-                if(other.name == "Shield"||other.name == "Plane"){
+                if(other.name == "Shield"){
                     Destroy(gameObject);
                     return;
                 }
-                Debug.Log("Yees");    
                 Health d = other.GetComponent<Health>();
-                d.DealDamageRpc(2);
+                d.DealDamageRpc(20);
                 Debug.Log(name);
                 Ball b  =  GetComponent<Ball>();
-                b.PlayerHealth.addDamageRpc(2);
+                b.PlayerHealth.addDamageRpc(10);
             }
         
         }

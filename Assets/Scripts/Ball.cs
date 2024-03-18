@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Fusion;
 using UnityEngine;
 
-public class Ball : MonoBehaviour
+public class Ball : NetworkBehaviour
 {
     public float Force = 15f;
     public Health PlayerHealth;
@@ -18,6 +19,7 @@ public class Ball : MonoBehaviour
         rb.AddForce(transform.forward *Force,ForceMode.Impulse);
     }
     void Update(){
+        if (!HasStateAuthority)  return;
         timeLeft -= Time.deltaTime;
         if(timeLeft < 0)
             Destroy(gameObject);

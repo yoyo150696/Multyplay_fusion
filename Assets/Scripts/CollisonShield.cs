@@ -13,8 +13,8 @@ public class CollisonShield : NetworkBehaviour
             Destroy(other);
             return;
         }
-        Debug.Log("here second " + other.name );
-        if(transform.parent == null)
-            gameObject.transform.SetParent(other.transform);
+        if(transform.parent == null){
+            transform.SetParent(other.transform);
         }
+    }
 }
